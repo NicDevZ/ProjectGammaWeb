@@ -1,195 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dawn RP</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-  background-color: black;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('images/background1.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-
-.logo{
-    background-image: url("images/DawnRPLogoCircleBW.png");
-    background-repeat: no-repeat;
-    transition: 1.5s;
-    -webkit-transition: 1.5s;
-    -moz-transition: 1.5s;
-    -ms-transition: 1.5s;
-    -o-transition: 1.5s;
-    min-width: 400px;
-    min-height: 400px;
-    cursor: pointer;
-}
-
-.logo:hover{
-    background-image: url("images/DawnRPLogoCircleConnect.png");
-    background-repeat: no-repeat;
-    transition: 1.2s;
-    -webkit-transition: 1.2s;
-    -moz-transition: 1.2s;
-    -ms-transition: 1.2s;
-    -o-transition: 1.2s;
-    -webkit-transform: rotate(360deg) scale(1.3);
-    -moz-transform: rotate(360deg) scale(1.3);
-    -o-transform: rotate(360deg) scale(1.3);
-    -ms-transform: rotate(360deg) scale(1.3);
-    transform: rotate(360deg) scale(1.3);
-
-}
-
-.middle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 20px;
-}
-
-#myNavbar{
-    background-color: #777;
-    color:white;
-}
-
-.opacity{
-  opacity: 85%;
-}
-
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Gamma — Under Construction</title>
+  <meta name="description" content="Project Gamma is under construction. Check back soon.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="PGLogo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body>
+<body class="page-construction">
+  <div class="grain" aria-hidden="true"></div>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container opacity" id="home">
-  <div class="w3-display-middle middle" style="white-space:nowrap;">
-    <a onclick="connect()"><div class="logo"></div></a>
-    <a>Click the logo to connect</a>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p id="quote"></p>
-</footer>
- 
-<script>
-
-function connect(){
-    window.location.href = "fivem://connect/play.dawn-rp.com";
-}
-
-var MOTD = ['"I got soggy biscuit all over my keyboard" - Helen','"Oh GYAT, I just came" - Taps','"Black guy is beating me, the black guy is beating me." - Deion','Suzu already asked him to rider her - Andy','"When your pants are down, you don\'t care about nothin\'" - Deion','"I came on the monkey so many times that\'s crazy" - Andy','"Go fist your grandma" - Andy','"I quit, I shit my pants" - Taco Jaime','""16 pence is 16 pence" - Ian','"What is an ancient seed?" - Evie "Here, I\'ll give you my ancient seed." - Andy','"Everything i touch gets hard" - Evie', '"PLEASE I\'M TRYING TO HIT YOU FROM THE BACK" - Deion','"So you\'re saying Deion\'s a background character?" - Jackie "Yes" - Helen', '"Please don\'t stick it in" - Corl', '"I love cock." - Sam','"I\'m currently being fucked by a monkey so" - Deion','"We hate Germany" - Taco','"Hold on, I gotta take a piss break" - Jackie "Just swallow it" - Ines','"I\'m hard as a rock" - Soup','"Ayo? Why don\'t you call me a good boy?" - Adam to Recent','"Optimus Prime does not want to come into me" - Andy','"why didnt he cum on me" - Andy','"I just ate dick" - Taps','"I walk into the living room, kill one black guy and kicked from the game" - Deion','"i love old cock" - Adam', '"Choking? Wide arrive!" - Taps','"Just balls. I mean, what, sorry." - Taps','"Fuck them Kids!" -Recent','"I\'m gonna roll your balls in a minute" - Helen','"Oh yeah deep throat me" - Soup', '"I am not in this equation or whatever the big word is."  - Adam','"I got turned on this is embarrassing" - Raine','"Deion\'s gonorrhea almost got me" - Andy','"His staff is in my ass" - Andy','""IBAMBE!!"" - Procas','""Black dont crack" - Deion','"I\'m going to lay down infront of you and have you step on me" - Kevin','"Oh no. I am dumb" - Taps','"Allie is an edger" - Corl','"I like to suck peoples face\'s" - Kebin','"Andy\'s in a corner getting butt fucked" - Deion','"Im sucking him off, Im sucking him off, Im sucking him off" - Deion','"I keep getting fisted" - Evie']
-
-document.getElementById("quote").innerText = MOTD[(Math.floor(Math.random() * MOTD.length))];
-
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
+  <main class="construction">
+    <div class="hero-atmosphere" aria-hidden="true"></div>
+    <div class="construction-inner">
+      <img class="hero-logo reveal is-visible" src="PGLogo.svg" alt="" width="320" height="180">
+      <p class="hero-brand reveal is-visible">Project Gamma</p>
+      <h1 class="hero-headline reveal is-visible">Under construction</h1>
+      <p class="hero-sub reveal is-visible">We are building something new. The site will be back soon.</p>
+    </div>
+  </main>
 </body>
 </html>

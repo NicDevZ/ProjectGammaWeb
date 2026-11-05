@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connecting to Project Gamma…</title>
   <script>
-    window.onload = function() {
-      // Replace "https://example.com" with the URL you want to open
-      window.location.href = "fivem://connect/play.dawn-rp.com";
+    window.onload = function () {
+      window.location.href = "fivem://connect/play.projectgamma.net";
     };
-    setTimeout(function() {
-        window.location.href = "index.html";
-      }, 30000);
+    setTimeout(function () {
+      window.location.href = "index.html";
+    }, 30000);
   </script>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #050505;
+      color: #e8e6e1;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    p { opacity: 0.7; max-width: 28rem; }
+  </style>
 </head>
 <body>
-  <!-- Your webpage content goes here -->
+  <div>
+    <p>Opening FiveM…</p>
+    <p>If nothing happens, make sure FiveM is installed. This page returns home shortly.</p>
+  </div>
 </body>
 </html>

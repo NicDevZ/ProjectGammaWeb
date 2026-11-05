@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Gamma — FiveM Roleplay</title>
+  <meta name="description" content="Project Gamma is a custom FiveM roleplay server built around character-driven play. Join the city or find us on Discord.">
+  <link rel="icon" href="PGLogo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Project Gamma home">
+      <img src="PGLogo.svg" alt="" width="56" height="32">
+      <span>Project Gamma</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#contact">Discord</a>
+      <a class="btn btn-primary btn-sm" href="connect.html" target="_blank" rel="noopener noreferrer">Join Server</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-brand">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <img class="hero-logo reveal" src="PGLogo.svg" alt="" width="320" height="180">
+        <p class="hero-brand reveal" id="hero-brand">Project Gamma</p>
+        <h1 class="hero-headline reveal">Serious stories. Living city.</h1>
+        <p class="hero-sub reveal">A custom FiveM roleplay server built around character-driven play.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-primary" href="connect.html" target="_blank" rel="noopener noreferrer">Join Server</a>
+          <a class="btn btn-ghost" href="https://discord.gg/REPLACE" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <h2 id="about-heading" class="reveal">About us</h2>
+        <p class="lead reveal">
+          Project Gamma is a community-driven roleplay server focused on long-form characters,
+          consequential choices, and a city that keeps moving when you log off. We build custom
+          systems in-house so the world feels coherent — not a pile of bolted-on scripts.
+        </p>
+        <p class="reveal">
+          Rules, applications, and support all live on Discord. That is the hub for everything
+          outside the game.
+        </p>
+        <ul class="feature-list">
+          <li class="reveal">Character-first roleplay with room for serious and everyday stories</li>
+          <li class="reveal">Custom economy and gameplay systems tailored to the server</li>
+          <li class="reveal">An active staff and community presence on Discord</li>
+          <li class="reveal">A living city meant to be shaped by the people who play in it</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <h2 id="contact-heading" class="reveal">Contact</h2>
+        <p class="lead reveal">
+          We do not use email or other contact channels. Join the Discord server for rules,
+          support, applications, and everything else.
+        </p>
+        <a class="btn btn-primary reveal" href="https://discord.gg/REPLACE" target="_blank" rel="noopener noreferrer">Join Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand brand-footer" href="#top">
+        <img src="PGLogo.svg" alt="" width="48" height="27">
+        <span>Project Gamma</span>
+      </a>
+      <a href="https://discord.gg/REPLACE" target="_blank" rel="noopener noreferrer">Discord</a>
+      <p class="copyright">&copy; <span id="year"></span> Project Gamma</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const reveals = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
